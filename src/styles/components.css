@@ -52,6 +52,10 @@
   color: var(--gf-brand);
   border-color: var(--gf-brand);
 }
+.gf-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 /* ── Badge ── */
 .gf-badge {

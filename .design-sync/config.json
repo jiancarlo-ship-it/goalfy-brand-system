@@ -1,0 +1,13 @@
+{
+  "projectId": "4d59da12-a9be-4544-b510-3550d5b29bc3",
+  "shape": "package",
+  "pkg": "goalfy-brand-system",
+  "globalName": "GoalfyBrandSystem",
+  "buildCmd": "npm run build",
+  "cssEntry": "dist/styles.css",
+  "readmeHeader": ".design-sync/conventions.md",
+  "overrides": {
+    "Button": { "cardMode": "column" },
+    "Card": { "cardMode": "column" }
+  }
+}
