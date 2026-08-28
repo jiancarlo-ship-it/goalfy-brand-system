@@ -1,0 +1,138 @@
+/*
+ * Goalfy — Component styles
+ * Classes usadas pelos componentes em src/components/*.tsx. Todo valor
+ * referencia um token de tokens.css, nunca um hex solto.
+ */
+
+.gf-root {
+  font-family: var(--gf-font-family);
+  color: var(--gf-ink);
+}
+
+/* ── Typography scale (utilitário opcional) ── */
+.gf-text-display { font-size: var(--gf-font-size-display); font-weight: 700; letter-spacing: -0.01em; }
+.gf-text-h1      { font-size: var(--gf-font-size-h1); font-weight: 700; letter-spacing: -0.01em; }
+.gf-text-h2      { font-size: var(--gf-font-size-h2); font-weight: 500; letter-spacing: -0.01em; }
+.gf-text-h3      { font-size: var(--gf-font-size-h3); font-weight: 700; }
+.gf-text-h4      { font-size: var(--gf-font-size-h4); font-weight: 600; }
+.gf-text-body-lg { font-size: var(--gf-font-size-body-lg); font-weight: 400; }
+.gf-text-body    { font-size: var(--gf-font-size-body); font-weight: 400; }
+.gf-text-body-sm { font-size: var(--gf-font-size-body-sm); font-weight: 400; }
+.gf-text-caption { font-size: var(--gf-font-size-caption); font-weight: 500; }
+.gf-text-label   { font-size: var(--gf-font-size-label); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── Button ── */
+.gf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gf-space-8);
+  height: 44px;
+  padding: 0 var(--gf-space-24);
+  border-radius: var(--gf-radius-md);
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: var(--gf-font-size-body-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.gf-btn-primary {
+  background: var(--gf-brand-deep);
+  color: var(--gf-color-neutral-000);
+  border-color: var(--gf-brand);
+}
+.gf-btn-primary:hover { background: var(--gf-brand-hi); }
+.gf-btn-secondary {
+  background: var(--gf-elevated);
+  color: var(--gf-ink);
+  border-color: var(--gf-border);
+}
+.gf-btn-ghost {
+  background: transparent;
+  color: var(--gf-brand);
+  border-color: var(--gf-brand);
+}
+
+/* ── Badge ── */
+.gf-badge {
+  display: inline-block;
+  padding: var(--gf-space-4) 14px;
+  border-radius: var(--gf-radius-full);
+  font-size: var(--gf-font-size-label);
+  font-weight: 600;
+}
+/* fundo = tint (300) real do kit; texto em --gf-ink, os 900 do kit são
+   claros demais pra funcionar como cor de texto no branco */
+.gf-badge-success { background: var(--gf-color-success-300); color: var(--gf-ink); }
+.gf-badge-warning { background: var(--gf-color-warning-300); color: var(--gf-ink); }
+.gf-badge-danger  { background: var(--gf-color-danger-300); color: var(--gf-ink); }
+.gf-badge-brand   { background: var(--gf-brand-muted); color: var(--gf-brand); }
+
+/* ── Card ── */
+.gf-card {
+  background: var(--gf-color-neutral-000);
+  border: 1px solid var(--gf-border);
+  border-radius: var(--gf-radius-lg);
+  padding: var(--gf-space-24);
+  width: 300px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+.gf-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20px;
+  bottom: 20px;
+  width: 3px;
+  background: var(--gf-brand);
+  border-radius: 0 4px 4px 0;
+}
+.gf-card-title {
+  font-size: var(--gf-font-size-body-lg);
+  font-weight: 600;
+  padding-left: var(--gf-space-16);
+  margin-bottom: var(--gf-space-4);
+  color: var(--gf-ink);
+}
+.gf-card-desc {
+  font-size: var(--gf-font-size-body-sm);
+  color: var(--gf-faint);
+  padding-left: var(--gf-space-16);
+  margin-bottom: var(--gf-space-16);
+}
+.gf-card-value {
+  font-size: 28px;
+  font-weight: 700;
+  padding-left: var(--gf-space-16);
+  margin-bottom: var(--gf-space-4);
+  color: var(--gf-ink);
+}
+.gf-card-delta {
+  font-size: var(--gf-font-size-label);
+  font-weight: 600;
+  color: var(--gf-ink);
+  padding-left: var(--gf-space-16);
+}
+.gf-card-arrow-up { color: var(--gf-success); }
+.gf-card-arrow-down { color: var(--gf-color-danger-900); }
+
+/* ── Input ── */
+.gf-input {
+  height: 44px;
+  padding: 0 14px;
+  background: var(--gf-elevated);
+  border: 1px solid var(--gf-border);
+  border-radius: var(--gf-radius-md);
+  color: var(--gf-muted);
+  font-family: inherit;
+  font-size: var(--gf-font-size-body-sm);
+  width: 280px;
+}
+.gf-input:focus {
+  outline: none;
+  background: var(--gf-color-neutral-000);
+  border-color: var(--gf-ink);
+  color: var(--gf-ink);
+  box-shadow: 0 0 0 3px rgba(127, 35, 247, 0.15);
+}

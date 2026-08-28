@@ -1,0 +1,97 @@
+/*
+ * Goalfy — Design Tokens
+ * Fonte: tokens globais do kit Elementor de goalfy.com.br (--e-global-color-*),
+ * extraídos 1:1 do brand-system-goalfy.html (Ago/2026). Não inventar valores
+ * novos aqui — qualquer token novo precisa vir do site real.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* ── Primary (brand / roxo) ── */
+  --gf-color-brand-1000: #5D29A1; /* botão */
+  --gf-color-brand-900: #7F23F7;  /* primary */
+  --gf-color-brand-800: #8C31FF;  /* secondary */
+  --gf-color-brand-700: #9941FF;  /* hover */
+  --gf-color-brand-600: #A654FF;  /* accent */
+  --gf-color-brand-100: #EEE0FF;  /* tint */
+
+  /* ── Neutral ── */
+  --gf-color-ink: #232426;    /* texto / h1-h3 */
+  --gf-color-neutral-900: #363E40;
+  --gf-color-neutral-700: #666D73;
+  --gf-color-neutral-600: #949FA6;
+  --gf-color-neutral-400: #E4E4E4;
+  --gf-color-neutral-200: #F2F2F2; /* surface elevada */
+  --gf-color-neutral-100: #F9F9F9; /* surface */
+  --gf-color-neutral-000: #FFFFFF;
+
+  /* ── Semantic ── */
+  --gf-color-success-900: #3EC063;
+  --gf-color-success-600: #83E29E;
+  --gf-color-success-300: #D4F3DD;
+  --gf-color-success-100: #F2FEF6;
+
+  --gf-color-info-900: #006DE4;
+  --gf-color-info-600: #4A94E5;
+  --gf-color-info-300: #A3CAF3;
+  --gf-color-info-100: #E8F3FF;
+
+  --gf-color-warning-900: #EE9500;
+  --gf-color-warning-600: #F8C776;
+  --gf-color-warning-300: #FBE4BD;
+  --gf-color-warning-100: #FFF5E5;
+
+  --gf-color-danger-900: #ED4E2B;
+  --gf-color-danger-600: #F1826A;
+  --gf-color-danger-300: #F3C2B7;
+  --gf-color-danger-100: #FFF3F0;
+
+  /* ── Aliases semânticos (compat com o guia estático original) ── */
+  --gf-bg: var(--gf-color-neutral-000);
+  --gf-surface: var(--gf-color-neutral-100);
+  --gf-elevated: var(--gf-color-neutral-200);
+  --gf-border: var(--gf-color-neutral-400);
+  --gf-ink: var(--gf-color-ink);
+  --gf-muted: var(--gf-color-neutral-700);
+  --gf-faint: var(--gf-color-neutral-600);
+  --gf-brand: var(--gf-color-brand-900);
+  --gf-brand-deep: var(--gf-color-brand-1000);
+  --gf-brand-hi: var(--gf-color-brand-700);
+  --gf-brand-muted: rgba(127, 35, 247, 0.08);
+  --gf-success: var(--gf-color-success-900);
+
+  /* ── Tipografia ── */
+  /* Red Hat Text carrega só pesos 300–700 no site. Nunca usar 800/900,
+     o navegador aplica negrito sintético e destoa do resto do produto. */
+  --gf-font-family: 'Red Hat Text', system-ui, sans-serif;
+  --gf-font-size-display: 64px;
+  --gf-font-size-h1: 45px;
+  --gf-font-size-h2: 34px;
+  --gf-font-size-h3: 21px;
+  --gf-font-size-h4: 18px;
+  --gf-font-size-body-lg: 18px;
+  --gf-font-size-body: 16px;
+  --gf-font-size-body-sm: 14px;
+  --gf-font-size-caption: 12px;
+  --gf-font-size-label: 11px;
+
+  /* ── Spacing scale ── */
+  --gf-space-2: 2px;
+  --gf-space-4: 4px;
+  --gf-space-8: 8px;
+  --gf-space-12: 12px;
+  --gf-space-16: 16px;
+  --gf-space-24: 24px;
+  --gf-space-32: 32px;
+  --gf-space-48: 48px;
+  --gf-space-64: 64px;
+
+  /* ── Border radius ── */
+  --gf-radius-none: 0px;
+  --gf-radius-sm: 4px;
+  --gf-radius-md: 8px;  /* raio real dos botões do site */
+  --gf-radius-lg: 12px;
+  --gf-radius-xl: 16px;
+  --gf-radius-full: 9999px;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "goalfy-brand-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design tokens and base UI components da Goalfy, extraídos 1:1 dos tokens globais do Elementor Kit em goalfy.com.br.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "style": "dist/styles.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:js && npm run build:types && npm run build:css",
+    "build:js": "esbuild src/index.ts --bundle --outfile=dist/index.js --format=cjs --platform=browser --external:react --external:react-dom && esbuild src/index.ts --bundle --outfile=dist/index.mjs --format=esm --platform=browser --external:react --external:react-dom",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "build:css": "node scripts/build-css.mjs",
+    "dev": "esbuild src/index.ts --bundle --outfile=dist/index.js --format=cjs --platform=browser --external:react --external:react-dom --watch"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "esbuild": "^0.21.0",
+    "typescript": "^5.4.0"
+  }
+}
