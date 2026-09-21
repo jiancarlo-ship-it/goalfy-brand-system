@@ -7,6 +7,23 @@ Fonte original: `../brand-system-goalfy.html`.
 Nenhum valor aqui é inventado. Cor, tipografia, espaçamento e raio vêm do que
 está de fato no ar no site.
 
+## Assets de marca
+
+- `assets/fonts/` — Red Hat Text (fonte oficial confirmada, `--gf-font-family`
+  em `src/styles/tokens.css`), família completa em woff estático e
+  woff2 variável.
+- `assets/logo/` — logo Goalfy em PNG (versão tinta e versão original,
+  fundo transparente).
+
+**Nota sobre documentação desatualizada:** os arquivos `IDENTIDADE_VISUAL.md`
+(pasta `Contexto e Identidade`) e a referência usada pela skill
+`ad-art-brief` ainda marcam paleta/tipografia da Goalfy como `⚠️ PREENCHER`
+(pendente de confirmação). Isso está desatualizado — os tokens deste
+repositório (extraídos do site ao vivo em ago/2026) são a fonte real e
+confirmada: cor de marca `#7F23F7` / `#8C31FF` / `#5D29A1`, fonte Red Hat
+Text. Ao usar este design system, prefira sempre `src/styles/tokens.css` a
+qualquer doc que diga "provisório".
+
 ## Instalação
 
 ```bash
