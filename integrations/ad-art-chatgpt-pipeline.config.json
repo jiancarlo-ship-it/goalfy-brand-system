@@ -1,0 +1,39 @@
+{
+  "_comentario": "Config de identidade visual da Goalfy PRONTA para o ad-art-chatgpt-pipeline (github.com/jiancarlo-ship-it/ad-art-chatgpt-pipeline). Não edite este arquivo — copie-o para config/goalfy.json dentro do repo do pipeline. Ver integrations/README.md deste repositório para o passo a passo e o pré-requisito de clonar os dois repos como pastas irmãs.",
+
+  "nome_marca": "Goalfy",
+
+  "paleta": {
+    "cor_principal": {
+      "hex": "#7F23F7",
+      "uso": "roxo primary da marca — cor de destaque/fundo principal da identidade visual"
+    },
+    "cor_secundaria": {
+      "hex": "#8C31FF",
+      "uso": "roxo secondary — cor de apoio (ícones, detalhes, variação do primary)"
+    }
+  },
+
+  "logo": {
+    "versao_clara_png": "../../goalfy-brand-system/assets/logo/goalfy-logo-original-transparente.png",
+    "versao_escura_png": "../../goalfy-brand-system/assets/logo/goalfy-logo-ink-transparente.png",
+    "regra_de_escolha": "fundo escuro -> use a versão clara (texto branco, 'original-transparente'); fundo claro -> use a versão escura (texto preto/ink, 'ink-transparente')"
+  },
+
+  "tipografia": {
+    "fonte_headline": "Red Hat Text",
+    "fonte_corpo": "Red Hat Text",
+    "peso_maximo_disponivel": 700,
+    "pasta_arquivos_fonte": "../../goalfy-brand-system/assets/fonts"
+  },
+
+  "personalidade_visual": "Sempre interface real do produto (CRM/painel Goalfy) ou dado numérico em destaque como elemento central, nunca banco de imagens genérico ou pessoas sorrindo forçado. Tela de produto sempre vem de print real anonimizado (nome/telefone/foto de cliente trocados por fictícios antes de gerar), nunca desenhada do zero pela IA. Tom direto, sem gradiente colorido excessivo nem emoji; roxo de marca (#7F23F7) como cor de destaque sobre fundo neutro (branco/cinza claro ou grafite escuro #232426), nunca competindo em contraste com o elemento principal.",
+
+  "correcao_cor_calibrada": {
+    "_comentario": "Sem valor único estável ainda — nos exemplos reais do pipeline (exemplos/crm-vendedor-brasileiro-v2/README.md) o hue_alvo variou por peça (3.9 / 4.6 / 5.6) mesmo usando o mesmo hex oficial #7F23F7, provavelmente por variação da própria geração do ChatGPT a cada imagem. Calibrar de novo (passo 5 do README do pipeline) a cada peça nova de fundo chapado, comparando o pixel gerado com o hex oficial, em vez de reaproveitar um valor fixo daqui.",
+    "hue_alvo": null,
+    "hue_faixa": [245, 285],
+    "sat_add": 0.0,
+    "val_mult": 1.0
+  }
+}
